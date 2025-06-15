@@ -1,0 +1,272 @@
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto-Light.ttf');
+   font-weight: 300;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto-Regular.ttf');
+   font-weight: 400;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto-Medium.ttf');
+   font-weight: 500;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'Roboto';
+   src: url('./fonts/Roboto-Bold.ttf');
+   font-weight: 700;
+   font-style: normal;
+}
+
+:root {
+	--mainColor: #2a65e4;
+	--mainColorDark: #1952cc;
+	--placeholder: #737373;
+	--black: #000000;
+	--grey: #373737;
+	--grey-dark: #2c2c2c;
+	--shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	--white: #ffffff;
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	letter-spacing: 0.02em;
+}
+
+::selection {
+	background-color: var(--mainColor);
+	color: var(--white);
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+	-moz-appearance: textfield;
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+html, body {
+	margin: 0;
+	font-size: 0;
+	background-color: var(--black);
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+	.page {
+		width: 600px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding-bottom: 200px;
+		box-sizing: border-box;
+	}
+	
+		.page h1 {
+			font-size: 70px;
+			color: var(--mainColor);
+			font-weight: 400;
+			white-space: nowrap;
+		}
+		
+		.page .inputs {
+			width: 100%;
+			height: auto;
+		}
+		
+			.page .inputs .inputSection {
+				width: 100%;
+				height: auto;
+			}
+			
+			.page .inputs .inputSection:first-child {
+				margin-bottom: 20px;
+			}
+			
+				.page .inputs .inputSection .divider {
+					width: 50px;
+					height: 47px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+					vertical-align: bottom;
+				}
+				
+					.page .inputs .inputSection .divider svg {
+						font-size: 25px;
+						color: var(--white);
+						display: inline-block;
+					}
+					
+				.page .inputs .inputSection .input {
+					width: calc(550px / 2);
+					height: auto;
+					display: inline-block;
+				}
+				
+					.page .inputs .inputSection .input .inputName {
+						font-size: 20px;
+						color: var(--mainColor);
+						font-weight: 400;
+						display: block;
+						padding: 0 0 4px 2px;
+					}
+					
+					.page .inputs .inputSection .input input[type="number"] {
+						width: 100%;
+						height: 50px;
+						border-radius: 3px;
+						border: none;
+						outline: none;
+						font-size: 22px;
+						font-weight: 400;
+						color: var(--white);
+						padding: 0 14px;
+						box-sizing: border-box;
+						background-color: var(--grey);
+					}
+					
+/* Aspect ratio dropdown ---------------------------------------------------------------------------------------------- */
+
+		.page .ratioSelect {
+			width: 100%;
+			height: 50px;
+			margin-top: 30px;
+			cursor: pointer;
+			position: relative;
+			transition: background-color 0.15s;
+			background-color: var(--grey);
+			border-radius: 3px;
+			overflow: hidden;
+			user-select: none;
+		}
+		
+			.page .ratioSelect:hover {
+				background-color: var(--grey-dark);
+			}
+			
+			.page .ratioSelect .ratioSelectDisplay {
+				width: 100%;
+				height: 100%;
+			}
+			
+				.page .ratioSelect .ratioSelectDisplay .ratioSelectDisplayText {
+					width: calc(100% - 55px);
+					height: 100%;
+					display: inline-flex;
+					align-items: center;
+					justify-content: flex-start;
+					padding: 0 15px;
+					box-sizing: border-box;
+					vertical-align: top;
+				}
+				
+					.page .ratioSelect .ratioSelectDisplay .ratioSelectDisplayText span {
+						font-size: 22px;
+						color: var(--white);
+						font-weight: 400;
+					}
+					
+				.page .ratioSelect .ratioSelectDisplay .ratioSelectArrow {
+					width: 55px;
+					height: 50px;
+					display: inline-flex;
+					align-items: center;
+					justify-content: center;
+				}
+				
+					.page .ratioSelect .ratioSelectDisplay .ratioSelectArrow svg {
+						font-size: 30px;
+						color: var(--mainColor);
+					}
+					
+			.page .ratioSelect .ratioSelectOptions {
+				width: 100%;
+				height: auto;
+				background-color :var(--grey);
+				position: absolute;
+				top: 50px;
+				left: 0;
+				overflow: hidden;
+				display: none;
+				border-bottom-left-radius: 3px;
+				border-bottom-right-radius: 3px;
+			}
+			
+				.page .ratioSelect .ratioSelectOptions .ratioSelectOption {
+					width: 100%;
+					height: 50px;
+					transition: background-color 0.15s;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+				}
+				
+					.page .ratioSelect .ratioSelectOptions .ratioSelectOption:hover {
+						background-color: var(--grey-dark);
+					}
+					
+					.page .ratioSelect .ratioSelectOptions .ratioSelectOption  .optionAspectRatio {
+						font-size: 22px;
+						color: var(--mainColor);
+						padding: 0 15px;
+					}
+					
+					.page .ratioSelect .ratioSelectOptions .ratioSelectOption  .optionDimensions {
+						font-size: 22px;
+						color: var(--mainColor);
+						padding-right: 15px;
+					}
+					
+					.page .ratioSelect .ratioSelectOptions .ratioSelectOption  .optionName {
+						font-size: 22px;
+						color: var(--mainColor);
+					}
+					
+/* Example ------------------------------------------------------------------------------------------------------------ */
+
+		.page .example {
+			width: 600px;
+			height: 400px;
+			border: 5px solid var(--mainColor);
+			background-color: var(--mainColor);
+			margin-top: 50px;
+			border-radius: 3px;
+			box-sizing: border-box;
+		}
+		
+			.page .example .exampleInner {
+				width: 100%;
+				height: 100%;
+				border-radius: 3px;
+				background-color: var(--grey-dark);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+			}
+			
+				.page .example .exampleInner .aspectRatio {
+					font-size: 40px;
+					color: var(--white);
+					font-weight: 400;
+				}
+				
+				.page .example .exampleInner .dimensions {
+					font-size: 25px;
+					color: var(--mainColor);
+					font-weight: 400;
+				}

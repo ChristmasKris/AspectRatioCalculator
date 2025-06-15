@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8"/>
+      <title>Aspect ratio calculator</title>
+      <link rel="icon" type="image/png" href="./favicon.png"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <link rel="stylesheet" type="text/css" href="./index.css"/>
+      <script src="./FontAwesome.min.js"></script>
+   </head>
+   <body>
+      <div class="page">
+         <h1>Aspect Ratio Calculator</h1>
+         <div class="inputs">
+            <div class="inputSection">
+               <div class="input">
+                  <span class="inputName">Original width</span>
+                  <input type="number" id="originalWidth" value="1920"/>
+               </div>
+               <div class="divider">
+                  <i class="fa-regular fa-xmark"></i>
+               </div>
+               <div class="input">
+                  <span class="inputName">Original height</span>
+                  <input type="number" id="originalHeight" value="1080"/>
+               </div>
+            </div>
+            <div class="inputSection">
+               <div class="input">
+                  <span class="inputName">New width</span>
+                  <input type="number" id="newWidth"/>
+               </div>
+               <div class="divider">
+                  <i class="fa-regular fa-xmark"></i>
+               </div>
+               <div class="input">
+                  <span class="inputName">New height</span>
+                  <input type="number" id="newHeight"/>
+               </div>
+            </div>
+         </div>
+         <div class="ratioSelect">
+            <div class="ratioSelectDisplay">
+               <div class="ratioSelectDisplayText">
+                  <span>Popular aspect ratios</span>
+               </div>
+               <div class="ratioSelectArrow">
+                  <i class="fa-solid fa-caret-down"></i>
+               </div>
+            </div>
+            <div class="ratioSelectOptions">
+                  <div class="ratioSelectOption" option="0">
+                     <span class="optionAspectRatio">16:9</span>
+                     <span class="optionDimensions">7680 x 4320</span>
+                     <span class="optionName">8K UHD</span>
+                  </div>
+                  <div class="ratioSelectOption" option="1">
+                     <span class="optionAspectRatio">16:9</span>
+                     <span class="optionDimensions">3840 x 2160</span>
+                     <span class="optionName">4K UHD</span>
+                  </div>
+                  <div class="ratioSelectOption" option="2">
+                     <span class="optionAspectRatio">16:9</span>
+                     <span class="optionDimensions">2560 x 1440</span>
+                     <span class="optionName">WQHD</span>
+                  </div>
+                  <div class="ratioSelectOption" option="3">
+                     <span class="optionAspectRatio">16:9</span>
+                     <span class="optionDimensions">1920 x 1080</span>
+                     <span class="optionName">Full HD</span>
+                  </div>
+                  <div class="ratioSelectOption" option="4">
+                     <span class="optionAspectRatio">4:3</span>
+                     <span class="optionDimensions">1024 x 768</span>
+                     <span class="optionName">Common tablet</span>
+                  </div>
+                  <div class="ratioSelectOption" option="5">
+                     <span class="optionAspectRatio">1:1</span>
+                     <span class="optionDimensions">1000 x 1000</span>
+                     <span class="optionName">Square</span>
+                  </div>
+                  <div class="ratioSelectOption" option="6">
+                     <span class="optionAspectRatio">4 : 3</span>
+                     <span class="optionDimensions">800 x 600</span>
+                     <span class="optionName">Common CRT TV</span>
+                  </div>
+                  <div class="ratioSelectOption" option="7">
+                     <span class="optionAspectRatio">5:4</span>
+                     <span class="optionDimensions">720 x 576</span>
+                     <span class="optionName">Phase Alternating Line (PAL)</span>
+                  </div>
+                  <div class="ratioSelectOption" option="8">
+                     <span class="optionAspectRatio">4:3</span>
+                     <span class="optionDimensions">640 x 480</span>
+                     <span class="optionName">Video Graphics Array (VGA)</span>
+                  </div>
+               </div>
+         </div>
+         <div class="example">
+            <div class="exampleInner">
+               <span class="aspectRatio">16:9</span>
+               <span class="dimensions">1920 x 1080</span>
+            </div>
+         </div>
+      </div>
+      <script src="./general.js"></script>
+      <script src="./index.js"></script>
+   </body>
+</html>
