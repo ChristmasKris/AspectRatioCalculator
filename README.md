@@ -2,7 +2,7 @@
 
 ## What is this project?
 
-The Aspect Ratio Calculator is a web-based tool designed to help users quickly calculate and visualize aspect ratios for images, videos, and other media. It allows you to enter original dimensions, select from popular aspect ratios, and instantly see the corresponding new dimensions—all with a live preview.
+The Aspect Ratio Calculator is a web-based tool designed to help users quickly calculate and visualize aspect ratios for images, videos, and other media. It allows you to enter original dimensions, select from popular aspect ratios, and instantly see the corresponding new dimensions-all with a live preview.
 
 ![Main UI](./READMEImages/1.png "Main UI")
 
